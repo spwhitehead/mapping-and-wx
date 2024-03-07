@@ -1,8 +1,8 @@
 import requests
 import re
 
-latitude = 48.15232724387619
-longitude = -92.66442225796172
+latitude = 36.1316607482913
+longitude = -115.2722891409596
 
 url = f"https://api.weather.gov/points/{latitude},{longitude}"
 
