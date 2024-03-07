@@ -1,15 +1,12 @@
 import geocode
 
-# Start Location (address)
 
-
+# Get locations
 def get_locations(start_address, end_address):
     start_address = input("Enter your starting address or city: ")
     end_address = input("Enter your destination address or city: ")
     return start_address, end_address
 
-
-# Destination Address
 
 # Show time to get there
 
