@@ -1,6 +1,6 @@
 import openrouteservice
 from openrouteservice.directions import directions
-import map_with_wx
+import geocode
 
 # Open the file and read the API key
 with open('ors_api_key.txt', 'r') as file:
@@ -11,8 +11,9 @@ client = openrouteservice.Client(key=api_key)
 
 # Define the start and end coordinates
 
-start_coord = (8.681495, 49.41461)
-end_coord = (map_with_wx.latitude, map_with_wx.longitude)
+start_coord = (geocode.start_location.latitude,
+               geocode.start_location.longitude)
+end_coord = (geocode.end_location.latitude, geocode.end_location.longitude)
 
 # Request directions via driving
 routes = directions(client, start_coord, end_coord)
