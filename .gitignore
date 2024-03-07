@@ -1,3 +1,4 @@
 *.env
 .DS_Store
 ors_api_key.txt
+__pycache__/
