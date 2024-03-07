@@ -1,9 +1,9 @@
 import requests
 import re
-import get_location
+import geocode.py
 
 destination_address = input("Enter your destination address: ")
-location_data = get_location.get_destination(destination_address)
+location_data = geocode.get_destination(destination_address)
 
 latitude = location_data[0]
 longitude = location_data[1]
