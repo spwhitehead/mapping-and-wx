@@ -1,14 +1,18 @@
 import openrouteservice
 from openrouteservice.directions import directions
+import map_with_wx
 
-# Replace 'your_api_key_here' with your actual ORS API key
-client = openrouteservice.Client(key='your_api_key_here')
+# Open the file and read the API key
+with open('ors_api_key.txt', 'r') as file:
+    api_key = file.read().strip()  # .strip() removes any leading/trailing whitespace
+
+# Initialize the ORS client with the API key read from file
+client = openrouteservice.Client(key=api_key)
 
 # Define the start and end coordinates
-# Coordinates are in the format [longitude, latitude]
-start_coord = (8.681495, 49.41461)  # Example: Heidelberg, Germany
-# Example: Destination in Heidelberg, Germany
-end_coord = (8.687872, 49.420318)
+
+start_coord = (8.681495, 49.41461)
+end_coord = (map_with_wx.latitude, map_with_wx.longitude)
 
 # Request directions via driving
 routes = directions(client, start_coord, end_coord)
