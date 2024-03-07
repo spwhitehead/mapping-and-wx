@@ -2,3 +2,5 @@
 .DS_Store
 ors_api_key.txt
 __pycache__/
+geocode_api_key.txt
+
