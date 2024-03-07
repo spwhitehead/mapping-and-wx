@@ -1,8 +1,12 @@
 import requests
 import re
+import get_location
 
-latitude = 36.1316607482913
-longitude = -115.2722891409596
+destination_address = input("Enter your destination address: ")
+location_data = get_location.get_destination(destination_address)
+
+latitude = location_data[0]
+longitude = location_data[1]
 
 url = f"https://api.weather.gov/points/{latitude},{longitude}"
 

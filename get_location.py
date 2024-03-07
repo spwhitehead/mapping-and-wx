@@ -13,7 +13,7 @@ def get_destination(destination_address: str) -> None:
         if destination_data:  # Check if the response contains data
             lat = destination_data[0]["lat"]
             lon = destination_data[0]["lon"]
-            print(lat, lon)
+            return (lat, lon)
         else:
             print("No results found for the given address.")
     else:
@@ -21,5 +21,6 @@ def get_destination(destination_address: str) -> None:
             f"Failed to get data from the API, status code: {response.status_code}")
 
 
-destination_address = input("Enter your destination address: ")
-get_destination(destination_address)
+if __name__ == "__main__":
+    destination_address = input("Enter your destination address: ")
+    get_destination(destination_address)
