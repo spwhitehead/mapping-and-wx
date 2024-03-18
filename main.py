@@ -7,7 +7,7 @@ import get_directions
 def get_locations():
     start_address = input("Enter your starting address or city: ")
     end_address = input("Enter your destination address or city: ")
-    return start_address, end_address
+    return geocode.get_geocoded_address(start_address), geocode.get_geocoded_address(end_address)
 
 
 def main():
@@ -17,9 +17,6 @@ def main():
         ors_api_key = file.read().strip()
 
     start_address, end_address = get_locations()
-
-    start_latitude, start_longitude = geocode.get_start_address(start_address)
-    end_latitude, end_longitude = geocode.get_destination_address(end_address)
 
     travel_hours = get_directions.get_travel_time(
         ors_api_key, (start_latitude, start_longitude), (end_latitude, end_longitude))

@@ -1,6 +1,5 @@
 import openrouteservice
 from openrouteservice.directions import directions
-import geocode
 
 
 def get_travel_time(api_key, start_coord, end_coord):

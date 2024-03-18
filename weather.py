@@ -3,7 +3,7 @@ import re
 import geocode
 from datetime import datetime, timedelta
 
-
+"""
 def fetch_and_display_weather(latitude, longitude):
     url = f"https://api.weather.gov/points/{latitude},{longitude}"
 
@@ -33,6 +33,7 @@ def fetch_and_display_weather(latitude, longitude):
     print(f"Winds are coming from the: \t{current_wind_direction}")
     print(f"Winds are at: \t\t\t{current_wind_speed}")
     print(f"The weather is currently: \t{weather_condition}")
+"""
 
 
 def fetch_and_display_weather_for_arrival(latitude, longitude, travel_hours):
