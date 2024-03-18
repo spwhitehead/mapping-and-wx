@@ -10,7 +10,7 @@ geolocator = Nominatim(user_agent="wx_destination_app_v1",
 def get_start_address(start_address: str):
     try:
         # Perform geocoding to get latitude and longitude
-        start_location = geolocator.geocode(main.get_locations.start_address)
+        start_location = geolocator.geocode(start_address)
 
         if start_location:
             return start_location.latitude, start_location.longitude
@@ -23,7 +23,7 @@ def get_start_address(start_address: str):
 def get_destination_address(destination_address: str):
     try:
         # Perform geocoding to get latitude and longitude
-        end_location = geolocator.geocode(main.get_locations.end_address)
+        end_location = geolocator.geocode(destination_address)
 
         if end_location:
             return end_location.latitude, end_location.longitude

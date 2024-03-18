@@ -4,7 +4,7 @@ import get_directions
 
 
 # Get locations
-def get_locations(start_address, end_address):
+def get_locations():
     start_address = input("Enter your starting address or city: ")
     end_address = input("Enter your destination address or city: ")
     return start_address, end_address
